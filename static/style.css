@@ -50,10 +50,10 @@ li a::before{
     height: 5px;
     top: 25px;
     border-radius: 1rem;
-    transition: 0.3 ease-in-out;
+    transition: 0.3s ease-in-out;
 
     /* GRADIENTE */
-    background: linear-gradient(to right, black red);
+    background: linear-gradient(to right, grey,white);
 
 }
 li a:hover::before{
@@ -68,7 +68,7 @@ li a:hover::before{
     color: black;
     cursor: pointer;
     text-wrap: nowrap;
-    transition: 0.3 ease-in-out;
+    transition: 0.3s ease-in-out;
     /* GRADIENTE 2*/
 }
 .btn_conexiones:hover{
@@ -76,7 +76,6 @@ li a:hover::before{
 
     transform:scale(1.03);
 }
-
 #menu-icon{
     font-size: 2rem;
     display: none;
@@ -100,10 +99,69 @@ section{
 }
 .acerca img{
     width: 30vw;
-    border-radius: 50%;
+    border-radius: 45%;
 }
 .info_box{
     display: flex;
     flex-direction: column;
     text-align: center;
 }
+.info_box h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.info_box h1{
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.info_box span{
+    background-clip: text ;
+    font-size: 2rem;
+    
+}
+.btn_group{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.btn{
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: 0.2s ease-in-out;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover{
+    background-color: black;
+    color: white;
+}
+.sociales{
+    display: flex;
+    justify-content:center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+
+    
+}
+.sociales i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out
+}
+.sociales i:hover{
+    transform: scale(1.1);
+}
+
+
+
