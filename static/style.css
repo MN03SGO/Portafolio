@@ -76,3 +76,20 @@ li a:hover::before{
 
     transform:scale(1.03);
 }
+
+#menu_icon{
+    font-size: 2rem;
+    display: none;
+}
+section{
+    min-height: 100vh;
+    padding: 8rem 12%;
+    width: 100%;
+    position: relative;
+}
+.acerca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
