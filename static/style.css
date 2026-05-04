@@ -310,13 +310,9 @@ section {
 
 .proyecto-card img {
     width: 100%;
-    /* Ocupa todo el ancho disponible del card */
     aspect-ratio: 16 / 9;
-    /* Mantiene la proporción sin importar la imagen original */
     object-fit: cover;
-    /* Recorta la imagen para llenar el espacio sin deformarse */
     object-position: top;
-    /* Prioriza ver la parte de arriba del sitio */
     border-radius: 1.5rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
