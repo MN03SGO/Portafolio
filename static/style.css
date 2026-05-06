@@ -179,6 +179,31 @@ section {
     color: white;
 }
 
+.temporal {
+    min-height: auto;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.proceso-contenido h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.img-proceso {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+
+
+
+
+
+
+
+
 .sociales {
     display: flex;
     justify-content: center;
