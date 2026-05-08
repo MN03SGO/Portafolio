@@ -354,7 +354,7 @@ section {
     font-weight: 500;
 }
 
-.input-box{
+.input-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -364,20 +364,23 @@ section {
     margin-top: 5rem;
 }
 
-.input-box input{
+.input-box input {
     position: relative;
     border-radius: 3rem;
     border: 2px solid black;
     padding: 2rem 8rem;
     font-size: 3rem;
 }
-.input-box input::placeholder{
+
+.input-box input::placeholder {
     font-size: 3rem;
 }
-.input{
-    position: relative;   
+
+.input {
+    position: relative;
 }
-.input i{
+
+.input i {
     position: absolute;
     font-size: 4rem;
     top: 50%;
@@ -385,9 +388,9 @@ section {
     transform: translate(50%, -50%);
 }
 
-.footer{
+.footer {
     bottom: 0;
-    left:0;
+    left: 0;
     height: 10rem;
     width: 100%;
     display: flex;
@@ -396,16 +399,88 @@ section {
     align-items: center;
     justify-items: center;
 }
-.footer ul{
+
+.footer ul {
     display: flex;
     align-items: center;
     gap: 3rem;
 }
-.footer ul li a{
+
+.footer ul li a {
     color: black;
     font-weight: 600;
 
 }
-.copyright{
-    font-size:300 ;
+
+.copyright {
+    font-size: 300;
+}
+
+
+/*responsive*/
+
+@media (max-width: 1280px) {
+    header {
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+
+    .contenedor_acerca {
+        gap: 2rem;
+    }
+
+    .info_box h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .nav_enlaces {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .contenedor_acerca {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .acerca img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .info_box {
+        text-align: center;
+        align-items: center;
+    }
+
+    .btn_group {
+        justify-content: center;
+    }
+
+    .input input {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 5rem 5%;
+    }
+
+    .info_box h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
 }
