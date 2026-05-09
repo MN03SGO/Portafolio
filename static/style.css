@@ -484,6 +484,7 @@ section {
         width: fit-content;
         justify-content: space-between;
     }
+
     header #menu-icon {
         display: block;
         color: white;
@@ -494,6 +495,35 @@ section {
 
     header .logo {
         font-size: 1.5rem;
+    }
+
+    .acerca {
+        align-items: flex-start;
+    }
+
+
+    .acerca img {
+        width: 60vw;
+        border-radius: 50%;
+    }
+
+    .acerca .contenedor_acerca {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .info_box h1 {
+        font-size: 2.5rem;
+    }
+
+    .info_box h3 {
+        font-size: 1.3rem;
+    }
+
+    .info_box span {
+        font-size: 1.3rem;
     }
 
     .nav_enlaces {
