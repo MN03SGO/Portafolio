@@ -154,7 +154,8 @@ section {
 
 .btn_group {
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.8rem;
     justify-content: center;
     margin-top: 2rem;
 }
@@ -319,6 +320,7 @@ section {
     border: 2px solid black;
     border-radius: 3rem;
     cursor: pointer;
+    overflow: hidden;
     transition: 0.3s ease-in-out;
 }
 
@@ -435,57 +437,80 @@ section {
 }
 
 @media(max-width: 768px) {
-    header{
-        gap:1rem;
+    header {
+        gap: 1rem;
         padding: 1rem 2rem;
     }
-    header{
+
+    header {
         font-size: 1rem;
     }
-    header .btn_conexiones{
+
+    header .btn_conexiones {
         display: none;
     }
-    .contenedor_acerca{
+
+    .contenedor_acerca {
         flex-direction: column;
     }
 
 
-    .input-box input{
+    .input-box input {
         padding: 1rem 2rem;
         font-size: 1.8rem;
     }
-    .input-box input::placeholder{
+
+    .input-box input::placeholder {
         font-size: 1.5rem;
     }
-    .input-box i{
-        display:none;
+
+    .input-box i {
+        display: none;
     }
-    .grid{
-        grid-template-columns: repeat(1,1fr);
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
     }
-    .experiencia_info img{
+
+    .experiencia_info img {
         width: 70vw;
     }
 }
 
 @media(max-width: 600px) {
+    header {
+        padding: 0.5rem 1.3rem;
+        gap: 1rem;
+        width: fit-content;
+        justify-content: space-between;
+    }
     header #menu-icon {
-        display: block; 
+        display: block;
         color: white;
+        font-size: 1.5rem;
         cursor: pointer;
+        z-index: 1001;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
     }
 
     .nav_enlaces {
         display: none;
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        top: calc(100% + 0.5rem);
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        min-width: 180px;
         background: black;
-        padding: 1rem 0;
-        border-radius: 0 0 1rem 1rem;
+        padding: 0.8rem 1.5rem;
+        border-radius: 1.5rem;
         flex-direction: column;
         text-align: center;
+        gap: 0.2rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
     .nav_enlaces.active {
@@ -493,17 +518,29 @@ section {
     }
 
     .nav_enlaces li {
-        margin-top: 1.5rem;
+        margin-top: 0;
         padding: 1rem;
     }
 
-    header {
-        padding: 1rem 2rem;
-        gap: 2rem;
-        position: relative;
-
-    header .logo {
-        font-size: 1.5rem;
+    .footer {
+        height: auto;
+        padding: 2rem 1rem;
+        text-align: center;
     }
-}
+
+    .footer ul {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+
+    .footer ul li a {
+        font-size: 0.85rem;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
 }
