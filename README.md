@@ -11,3 +11,5 @@ Nacio como hobby para la reorganizacion de mis proyectos, y se me ocurrio darle 
 - CSS3 (Flexbox, Grid, Media Queries)
 - JavaScript (Vanilla)
 - Font Awesome 7
+
+Normalmente suelo trabajarlos los fines de semana, asi que el proceso de creacion final es algo tardo : ) y durante lo hago refuerzo y aprendo
