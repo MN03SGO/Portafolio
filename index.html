@@ -119,24 +119,24 @@
     <section id="proyectos" class="proyectos">
         <h2 class="section-title">Mis proyectos</h2>
 
-        <div class="btn_group">
-            <button class="btn active" onclick="filterProjects('all')">Todos</button>
-            <button class="btn" onclick="filterProjects('web')">Proyectos Web</button>
+        <div id="proyectos" class="btn_group btn_proyectos">
+            <button class="btn activo" onclick="filterProjects('all')">Todos</button>
+            <button class="btn " onclick="filterProjects('web')">Proyectos Web</button>
             <button class="btn" onclick="filterProjects('inventario')">Sistema de Inventario</button>
-            <button class="btn" onclick="filterProjects('embebido')">Proyecto Embebido</button>
+            <button class="btn " onclick="filterProjects('embebido')">Proyecto Embebido</button>
         </div>
 
 
 
 
 
-       <div class="proyecto-grid" id="projectGrid">
+    <div class="proyecto-grid" id="projectGrid">
             <!-- PROYECTO WEB 1 -->
             <div class="proyecto-card" data-category="web">
                 <div>
                     <span class="category-tag">Desarrollo Web</span>
                     <img src="img/img_proyectos/instituto.png" alt="Instituto" onerror="this.src='https://via.placeholder.com/400x225?text=Sistema+Instituto'">
-                    <h3>Sistema Instituto</h3>
+                    <h3>Pagina web INTI</h3>
                     <p>Sistema integral para la gestión académica y administrativa de instituciones educativas.</p>
                 </div>
                 <div class="btn_group">
