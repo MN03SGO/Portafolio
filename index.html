@@ -120,91 +120,23 @@
         <h2 class="section-title">Mis proyectos</h2>
 
         <div id="proyectos" class="btn_group btn_proyectos">
-            <button class="btn activo" onclick="filterProjects('all')">Todos</button>
-            <button class="btn " onclick="filterProjects('web')">Proyectos Web</button>
-            <button class="btn" onclick="filterProjects('inventario')">Sistema de Inventario</button>
-            <button class="btn " onclick="filterProjects('embebido')">Proyecto Embebido</button>
+            <button id="todos" class="btn activo">Todos</button>
+            <button id="proyectos_web"class="btn">Proyectos Web</button>
+            <button id="proyectos_inventario" class="btn">Sistema de Inventario</button>
+            <button id="proyectos_embebido"class="btn ">Proyecto Embebido</button>
         </div>
-
-
-
-
-
     <div class="proyecto-grid" id="projectGrid">
-            <!-- PROYECTO WEB 1 -->
-            <div class="proyecto-card" data-category="web">
-                <div>
-                    <span class="category-tag">Desarrollo Web</span>
-                    <img src="img/img_proyectos/instituto.png" alt="Instituto" onerror="this.src='https://via.placeholder.com/400x225?text=Sistema+Instituto'">
-                    <h3>Pagina web INTI</h3>
-                    <p>Sistema integral para la gestión académica y administrativa de instituciones educativas.</p>
-                </div>
-                <div class="btn_group">
-                    <a href="https://mn03sgo.github.io/inti2.github.io/" target="_blank" class="btn">Visualizar</a>
-                    <a href="https://github.com/MN03SGO/inti2.github.io" target="_blank" class="btn">Repo</a>
-                </div>
-            </div>
 
-            <!-- PROYECTO WEB 2 -->
-            <div class="proyecto-card" data-category="web">
-                <div>
-                    <span class="category-tag">Desarrollo Web</span>
-                    <img src="img/img_proyectos/florecer.png" alt="Florecer" onerror="this.src='https://via.placeholder.com/400x225?text=Florecer+Natural'">
-                    <h3>Florecer Natural</h3>
-                    <p>Sitio web enfocado en la promoción y venta de productos naturales y salud.</p>
-                </div>
-                <div class="btn_group">
-                    <a href="https://mn03sgo.github.io/FlorecerNatural.github.io/" target="_blank" class="btn">Visualizar</a>
-                    <a href="https://github.com/MN03SGO/FlorecerNatural.github.io" target="_blank" class="btn">Repo</a>
-                </div>
-            </div>
 
-            <!-- PROYECTO WEB 3 -->
-            <div class="proyecto-card" data-category="web">
-                <div>
-                    <span class="category-tag">Desarrollo Web</span>
-                    <img src="img/img_proyectos/joyeria.png" alt="Joyería" onerror="this.src='https://via.placeholder.com/400x225?text=Joyería+Elegance'">
-                    <h3>Joyería Online</h3>
-                    <p>E-commerce elegante diseñado para la visualización de catálogos de joyería fina.</p>
-                </div>
-                <div class="btn_group">
-                    <a href="https://mn03sgo.github.io/INTI.github.io/index.html" target="_blank" class="btn">Visualizar</a>
-                    <a href="https://github.com/MN03SGO/INTI.github.io" target="_blank" class="btn">Repo</a>
-                </div>
-            </div>
 
-            <!-- PROYECTO INVENTARIO -->
-            <div class="proyecto-card" data-category="inventario">
-                <div>
-                    <span class="category-tag">Sistema de Gestión</span>
-                    <img src="img/img_proyectos/Fly.png" alt="Inventario" onerror="this.src='https://via.placeholder.com/400x225?text=Control+Inventario'">
-                    <h3>Sistema de Inventario Fly</h3>
-                    <p>Aplicación web robusta para el control de stock, entradas y salidas de productos en tiempo real.</p>
-                </div>
-                <div class="btn_group">
-                    <a href="#" target="_blank" class="btn">En Desarrollo</a>
-                    <a href="https://github.com/MN03SGO/Krocbites2" target="_blank" class="btn">Repo</a>
-                </div>
-            </div>
 
-            <!-- PROYECTO EMBEBIDO -->
-            <div class="proyecto-card" data-category="embebido">
-                <div>
-                    <span class="category-tag">Raspberry Pi / IA</span>
-                    <img src="img/linux.png" alt="Raspberry Pi" onerror="this.src='https://via.placeholder.com/400x225?text=Asistente+Visual+IA'">
-                    <h3>Asistente Visual RPi 4</h3>
-                    <p>Dispositivo de asistencia para personas con discapacidad visual utilizando visión artificial y Raspberry Pi Cam.</p>
-                </div>
-                <div class="btn_group">
-                    <button class="btn" style="opacity: 0.5; cursor: not-allowed;">En Desarrollo</button>
-                    <a href="https://github.com/MN03SGO/GafasIA" class="btn">Repo</a>
-                </div>
-            </div>
-        </div>
+
+    
     </section>
 
-
-    <section id="contacto" class="contacto">
+    <!--  
+    
+     <section id="contacto" class="contacto">
         <div class="input-box">
             <h2 class="section-title">Contactame</h2>
 
@@ -215,6 +147,9 @@
             <div class="btn">Enviar</div>
         </div>
     </section>
+    
+    -->
+
 
     <footer id="footer" class="footer">
         <ul>

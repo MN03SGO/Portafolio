@@ -259,6 +259,9 @@ section {
     transform: translateX(-50%);
 }
 
+.experiencia{
+    padding-top: 10rem ;
+}
 .experiencia_info {
     width: 100%;
     display: flex;
@@ -339,6 +342,7 @@ section {
 
 /*Proyectos*/
 
+
 .proyecto-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -394,11 +398,10 @@ section {
     font-weight: 500;
 }
 
-
-
+/**
 .input-box {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -407,12 +410,13 @@ section {
 }
 
 .input-box input {
+    text-align: center;
     position: relative;
     border-radius: 3rem;
     border: 2px solid black;
-    padding: 0.8rem 5rem; 
+    padding: 0.8rem 2rem; 
     font-size: 1rem;
-    width: 400px;
+    width: 350px;
 }
 
 .input-box input::placeholder {
@@ -430,6 +434,7 @@ section {
     left: 10px;
     transform: translate(50%, -50%);
 }
+    **/
 
 .footer {
     bottom: 0;
