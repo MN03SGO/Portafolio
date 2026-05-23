@@ -47,16 +47,16 @@ const proyectos = [
     nomProyecto: "Asistencia de Viaje",
     img: "img/img_proyectos/Fly.png",
     defaultImg: "https://via.placeholder.com/400x225?text=Control+Inventario",
-    category: "inventario",
-    categoryTag: "Sistema de Asistencia",
+    category: "web",
+    categoryTag: "Desarrollo web",
     desc: "Aplicación web robusta para el control de stock, entradas y salidas de productos en tiempo real.",
     visual: "https://test1-teal-ten.vercel.app/",
-    repo: "https://github.com/MN03SGO/Krocbites2",
+    repo: "https://github.com/MN03SGO/test1",
     /*enDesarrollo: true,*/
   },
   {
     nomProyecto: "Asistente Visual RPi 4",
-    img: "img/linux.png",
+    img: "img/img_proyectos/rasvision.jpg",
     defaultImg: "https://via.placeholder.com/400x225?text=Asistente+Visual+IA",
     category: "embebido",
     categoryTag: "Raspberry Pi / IA",
@@ -66,16 +66,29 @@ const proyectos = [
     enDesarrollo: true,
     isLogo: true,
   },
+  /*CRUDS*/
   {
     nomProyecto: "Sistema de inventario",
     img: "img/img_proyectos/CRUD.png",
     defaultImg: "https://via.placeholder.com/400x225?text=Asistente+Visual+IA",
     category: "inventario",
-    categoryTag: "Sistema de Asistencia",
+    categoryTag: "Sistema de Gestion",
     desc: 'Sistema de gestion de inventario "CRUD", para una empresa que vende galletas ',
     visual: "#",
-    repo: "https://github.com/MN03SGO/GafasIA",
+    repo: "https://github.com/MN03SGO/Krocbites2",
     enDesarrollo: true,
+    isLogo: true,
+  },
+  {
+    nomProyecto: "CRUD Basico",
+    img: "img/img_proyectos/CRUD_py.png",
+    defaultImg: "https://via.placeholder.com/400x225?text=Asistente+Visual+IA",
+    category: "inventario",
+    categoryTag: "Sistema de Gestion",
+    desc: "Aplicacion  de crear, actualizar, eliminar y modificar en un sistema sencillo echo en python ",
+    visual: "#",
+    repo: "https://github.com/MN03SGO/Krocbites2",
+    enDesarrollo: false,
     isLogo: true,
   },
 ];
@@ -91,15 +104,17 @@ const proyectos_display = (proyectos_mostrar) => {
     caja.className = "proyecto-card";
     caja.setAttribute("data-category", proyecto.category);
 
+    let visualBtnHTML = "";
 
-    let visualBtnHTML = proyecto.enDesarrollo
-      ? `<span class="btn" style="opacity: 0.5; cursor: not-allowed;">En Desarrollo</span>`
-      : `<a href="${proyecto.visual}" target="_blank" class="btn">Visualizar</a>`;
-
+    if (proyecto.enDesarrollo) {
+      visualBtnHTML = `<span class="btn" style="opacity: 0.5; cursor: not-allowed;">En Desarrollo</span>`;
+    } else if (proyecto.visual && proyecto.visual !== "#") {
+      visualBtnHTML = `<a href="${proyecto.visual}" target="_blank" class="btn">Visualizar</a>`;
+    }
     caja.innerHTML = `
                     <div class="proyecto-content">
                         <span class="category-tag">${proyecto.categoryTag}</span>
-                        <div class="proyecto-img-container ${proyecto.isLogo ? 'is-logo' : ''}">
+                        <div class="proyecto-img-container ${proyecto.isLogo ? "is-logo" : ""}">
                             <img src="${proyecto.img}" alt="${proyecto.nomProyecto}" onerror="this.onerror=null; this.src='${proyecto.defaultImg}';">
                         </div>
                         <h3>${proyecto.nomProyecto}</h3>
@@ -113,7 +128,6 @@ const proyectos_display = (proyectos_mostrar) => {
     gridContainer.appendChild(caja);
   });
 };
-
 
 const proyectosFiltrados = (category) => {
   if (category === "all") {
