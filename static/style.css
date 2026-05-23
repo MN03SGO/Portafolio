@@ -693,8 +693,6 @@ section {
 }
 
 
-/*responsive*/
-
 @media (max-width: 1280px) {
     header {
         padding: 1rem 2rem;
@@ -746,7 +744,6 @@ section {
         padding: 6rem 5% 4rem 5%;
     }
 
-    /* 2 columnas en tablet */
     .herramientas-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.2rem;
@@ -777,6 +774,8 @@ section {
         width: fit-content;
         justify-content: space-between;
     }
+
+
 
     header #menu-icon {
         display: block;
@@ -844,6 +843,10 @@ section {
         padding: 1rem;
     }
 
+    .celular {
+        display: block;
+    }
+
     .footer {
         height: auto;
         padding: 2rem 1rem;
@@ -876,7 +879,6 @@ section {
         padding: 5rem 4% 3rem 4%;
     }
 
-    /* 2 columnas en móvil también, cards más compactas */
     .herramientas-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem;
