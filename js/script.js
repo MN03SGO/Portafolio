@@ -48,11 +48,11 @@ const proyectos = [
     img: "img/img_proyectos/Fly.png",
     defaultImg: "https://via.placeholder.com/400x225?text=Control+Inventario",
     category: "inventario",
-    categoryTag: "Sistema de Gestión",
+    categoryTag: "Sistema de Asistencia",
     desc: "Aplicación web robusta para el control de stock, entradas y salidas de productos en tiempo real.",
-    visual: "#",
+    visual: "https://test1-teal-ten.vercel.app/",
     repo: "https://github.com/MN03SGO/Krocbites2",
-    enDesarrollo: true,
+    /*enDesarrollo: true,*/
   },
   {
     nomProyecto: "Asistente Visual RPi 4",
