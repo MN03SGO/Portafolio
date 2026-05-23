@@ -717,3 +717,155 @@ section {
         margin-top: 0.5rem;
     }
 }
+
+/* Herramientas & Habilidades */
+.herramientas {
+    padding: 10rem 12% 8rem 12%;
+    width: 100%;
+    position: relative;
+    background-color: white;
+}
+
+.herramientas-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.categoria-herramientas {
+    text-align: center;
+}
+
+.categoria-herramientas h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #000;
+    position: relative;
+    display: inline-block;
+}
+
+.categoria-herramientas h3::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #000;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.herramientas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.herramienta-card {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.herramienta-card i {
+    font-size: 2rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.herramienta-card span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.herramienta-card:hover {
+    background-color: black;
+    border-color: black;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.herramienta-card:hover span {
+    color: white;
+}
+
+.herramienta-card:hover i.html-icon {
+    color: #E34F26;
+    transform: scale(1.1);
+}
+
+.herramienta-card:hover i.css-icon {
+    color: #1572B6;
+    transform: scale(1.1);
+}
+
+.herramienta-card:hover i.js-icon {
+    color: #F7DF1E;
+    transform: scale(1.1);
+}
+
+.herramienta-card:hover i.fa-java {
+    color: red;
+    transform: scale(1.1);
+}
+
+.herramienta-card:hover i.fa-terminal {
+    color: white;
+    transform: scale(1.1);
+}
+.herramienta-card .post-icon {
+    width: 2rem;
+    height: 2rem;
+    fill: #333;
+    transition: all 0.3s ease;
+}
+.herramienta-card:hover .post-icon {
+    fill: #336791;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.herramienta-card:hover i.linux-icon {
+    color: #FCC624;
+    transform: scale(1.1);
+}
+
+.herramienta-card:hover i.fa-raspberry-pi {
+    color: #C51A4A;
+    transform: scale(1.1);
+}
+
+.herramienta-card:hover i.git-icon {
+    color: #F05032;
+    transform: scale(1.1);
+}
+
+.herramienta-card:hover i.network-icon {
+    color: #4A154B;
+    transform: scale(1.1);
+}
+
+.herramienta-card:hover i.security-icon {
+    color: #1679A7;
+    transform: scale(1.1);
+}
