@@ -60,21 +60,23 @@ const proyectos = [
     defaultImg: "https://via.placeholder.com/400x225?text=Asistente+Visual+IA",
     category: "embebido",
     categoryTag: "Raspberry Pi / IA",
-    desc: "Dispositivo de asistencia para personas con discapacidad visual utilizando visión artificial y Raspberry Pi Cam.",
+    desc: "Dispositivo de asistencia para personas con discapacidad visual utilizando yolo V8 y una Raspberry Pi 4 + piCam.",
     visual: "#",
     repo: "https://github.com/MN03SGO/GafasIA",
     enDesarrollo: true,
+    isLogo: true,
   },
-    {
+  {
     nomProyecto: "Sistema de inventario",
     img: "img/img_proyectos/CRUD.png",
     defaultImg: "https://via.placeholder.com/400x225?text=Asistente+Visual+IA",
-    category: "embebido",
+    category: "inventario",
     categoryTag: "Sistema de Asistencia",
-    desc: "Dispositivo de asistencia para personas con discapacidad visual utilizando visión artificial y Raspberry Pi Cam.",
+    desc: 'Sistema de gestion de inventario "CRUD", para una empresa que vende galletas ',
     visual: "#",
     repo: "https://github.com/MN03SGO/GafasIA",
     enDesarrollo: true,
+    isLogo: true,
   },
 ];
 
@@ -95,9 +97,11 @@ const proyectos_display = (proyectos_mostrar) => {
       : `<a href="${proyecto.visual}" target="_blank" class="btn">Visualizar</a>`;
 
     caja.innerHTML = `
-                    <div>
+                    <div class="proyecto-content">
                         <span class="category-tag">${proyecto.categoryTag}</span>
-                        <img src="${proyecto.img}" alt="${proyecto.nomProyecto}" onerror="this.onerror=null; this.src='${proyecto.defaultImg}';">
+                        <div class="proyecto-img-container ${proyecto.isLogo ? 'is-logo' : ''}">
+                            <img src="${proyecto.img}" alt="${proyecto.nomProyecto}" onerror="this.onerror=null; this.src='${proyecto.defaultImg}';">
+                        </div>
                         <h3>${proyecto.nomProyecto}</h3>
                         <p>${proyecto.desc}</p>
                     </div>
