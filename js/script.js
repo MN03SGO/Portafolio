@@ -56,7 +56,7 @@ const proyectos = [
   },
   {
     nomProyecto:"Comedores S.S",
-    img:"/img/tools/linux.png",
+    img:"/img/img_proyectos/ss.jpeg",
     defaultImg: "https://via.placeholder.com/400x225?text=Joyeria+Online",
     category: "web",
     categoryTag: "Desarrollo web",
@@ -64,7 +64,7 @@ const proyectos = [
     visual: "#",
     repo: "https://github.com/MN03SGO/comedores_ss",
     enDesarrollo: true,
-    isLogo: true,
+    /*isLogo: true,*/
   },
   {
     nomProyecto: "Asistente Visual RPi 4",
