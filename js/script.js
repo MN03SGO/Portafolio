@@ -55,6 +55,18 @@ const proyectos = [
     /*enDesarrollo: true,*/
   },
   {
+    nomProyecto:"Comedores S.S",
+    img:"/img/tools/linux.png",
+    defaultImg: "https://via.placeholder.com/400x225?text=Joyeria+Online",
+    category: "web",
+    categoryTag: "Desarrollo web",
+    desc: "Intento de creacion de aplicacion web comunitaria que mapea comedores populares, pupuserías, puestos callejeros y mercados económicos en San Salvador los lugares reales donde come la gente de a pie, que Google Maps ignora o digitalmente “no existen”.",
+    visual: "#",
+    repo: "https://github.com/MN03SGO/comedores_ss",
+    enDesarrollo: true,
+    isLogo: true,
+  },
+  {
     nomProyecto: "Asistente Visual RPi 4",
     img: "img/img_proyectos/rasvision.jpg",
     defaultImg: "https://via.placeholder.com/400x225?text=Asistente+Visual+IA",
@@ -63,7 +75,6 @@ const proyectos = [
     desc: "Dispositivo de asistencia para personas con discapacidad visual utilizando yolo V8 y una Raspberry Pi 4 + piCam.",
     visual: "#",
     repo: "https://github.com/MN03SGO/GafasIA",
-    enDesarrollo: true,
     isLogo: true,
   },
   /*CRUDS*/
