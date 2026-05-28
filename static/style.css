@@ -473,6 +473,12 @@ section {
     color: white;
     transform: scale(1.1);
 }
+.herramienta-card:hover i.fa-database{
+    color: rgb(255, 166, 0);
+    transform: scale(1.1);
+}
+
+
 
 
 /*Proyectos*/
