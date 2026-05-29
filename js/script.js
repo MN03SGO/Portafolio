@@ -56,7 +56,7 @@ const proyectos = [
   },
   {
     nomProyecto:"Comedores S.S",
-    img:"/img/img_proyectos/ss.jpeg",
+    img:"img/img_proyectos/ss.jpeg",
     defaultImg: "https://via.placeholder.com/400x225?text=Joyeria+Online",
     category: "web",
     categoryTag: "Desarrollo web",
