@@ -269,6 +269,33 @@ section {
     transform: translateX(-50%);
 }
 
+
+.acerca_caja {
+    background-color: white;
+    min-height: auto;
+    padding: 6rem 10%;
+
+}
+
+.acerca_caja .info_acerca {
+    max-width: 800px;
+    margin: auto;
+}
+
+.caja_texto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info_texto {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
+
 .experiencia {
     padding-top: 10rem;
 }
@@ -278,7 +305,14 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
+
+.grid-card i {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
 
 .grid {
     display: grid;
@@ -301,6 +335,8 @@ section {
     transition: 0.2s ease-in-out;
 }
 
+
+
 .grid-card ul {
     list-style: disc;
     padding-left: 1.5rem;
@@ -312,7 +348,7 @@ section {
 }
 
 .grid-card ul li {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     line-height: 1.5;
 }
 
@@ -322,10 +358,6 @@ section {
     color: white;
 }
 
-.gird-card i {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
 
 .grid-card span {
     font-size: 1.5rem;
@@ -812,6 +844,18 @@ section {
         width: 100%;
     }
 
+
+
+    .info_texto {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .acerca_caja {
+        padding: 5rem 6%;
+    }
+
+
     .info_box h1 {
         font-size: 2.5rem;
     }
@@ -822,6 +866,10 @@ section {
 
     .info_box span {
         font-size: 1.3rem;
+    }
+    .grid-card ul li {
+        font-size: 0.90rem;
+        line-height: 1.6;
     }
 
     .nav_enlaces {
