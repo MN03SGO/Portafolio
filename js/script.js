@@ -14,6 +14,7 @@ if (menuIcono && navEnlaces) {
 
 const proyectos = [
   {
+    /*WEB*/
     nomProyecto: "Pagina web INTI",
     img: "img/img_proyectos/instituto.png",
     defaultImg: "https://via.placeholder.com/400x225?text=Pagina+web+INTI",
@@ -67,6 +68,7 @@ const proyectos = [
     /*isLogo: true,*/
   },
   {
+    /*Embebido */
     nomProyecto: "Asistente Visual RPi 4",
     img: "img/img_proyectos/rasvision.jpg",
     defaultImg: "https://via.placeholder.com/400x225?text=Asistente+Visual+IA",
@@ -102,6 +104,22 @@ const proyectos = [
     enDesarrollo: false,
     isLogo: true,
   },
+
+  /*HOMELAB*/
+    {
+    nomProyecto: "Infraestructura VPN usando Tailscale",
+    img: "img/img_proyectos/vpn.jpg",
+    defaultImg: "https://via.placeholder.com/400x225?text=Asistente+Visual+IA",
+    category: "homelab",
+    categoryTag: "Infraestructura",
+    desc: "Este proyecto integra una VPN Mesh mediante Tailscale para acceso remoto seguro y tambien utiliza Docker para desplegar servicios, en este caso Open WebUI y Ollama. Esto permite la administración remota por protocolo SSH, la ejecución de modelos de IA locales con una interfaz bonita y amigable además el acceso seguro a recursos de la red doméstic",
+    visual: "#",
+    repo: "https://github.com/peperechas-sv/Home_lab",
+    enDesarrollo: false,
+    isLogo: true,
+  },
+
+
 ];
 
 const proyectos_display = (proyectos_mostrar) => {
@@ -155,9 +173,10 @@ const btnTodos = document.getElementById("todos");
 const btnWeb = document.getElementById("proyectos_web");
 const btnInventario = document.getElementById("proyectos_inventario");
 const btnEmbebido = document.getElementById("proyectos_embebido");
+const btn_homelab  = document.getElementById("proyectos_homelab");
 
 const setActiveButton = (activeBtn) => {
-  const todosLosBotones = [btnTodos, btnWeb, btnInventario, btnEmbebido];
+  const todosLosBotones = [btnTodos, btnWeb, btnInventario, btnEmbebido, btn_homelab];
   todosLosBotones.forEach((btn) => {
     if (btn) btn.classList.remove("activo");
   });
@@ -183,6 +202,13 @@ if (btnEmbebido) {
     proyectosFiltrados("embebido");
     setActiveButton(btnEmbebido);
   });
+}
+
+if(btn_homelab){
+  btn_homelab.addEventListener("click",() =>{
+    proyectosFiltrados("homelab");
+    setActiveButton(btn_homelab);
+  })
 }
 
 if (btnTodos) {
