@@ -46,6 +46,24 @@ header {
 
 }
 
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+
+    /* Cancela los estilos del selector section */
+    min-height: unset;
+    padding: 0;
+    width: 100%;
+}
+
+
 li a {
     position: relative;
     color: white;
@@ -664,6 +682,33 @@ section {
     border: 2px solid white;
 }
 
+.tarjeta_tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 0.8rem;
+    padding-top: 0.8rem;
+}
+
+.tech-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 3rem;
+    border: 1.5px solid black;
+    color: black;
+    background: transparent;
+    transition: 0.2s ease-in-out;
+}
+
+.proyecto-card:hover .tech-tag  {
+    border-color: white;
+    color: white;
+}
+
+
 /**
 .input-box {
     display: flex;
@@ -729,14 +774,70 @@ section {
 .copyright {
     font-size: 500;
 }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
+.modal_caja {
+    margin: auto;
+    width: 90%;
+    max-width: 480px;
+    background-color: white;
+    border-radius: 1.5rem;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    animation: slideUp 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px) scale(0.96); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal_img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.modal_titulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.modal_texto {
+    color: #555;
+    font-size: 1rem;
+}
+
+.modal_cerrar {
+    margin-top: 0.5rem;
+    padding: 0.7rem 2rem;
+    border-radius: 3rem;
+    border: 2px solid black;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.modal_cerrar:hover {
+    background: black;
+    color: white;
+}
 
 @media (max-width: 1280px) {
     header {
         padding: 1rem 2rem;
         gap: 2rem;
     }
-
     .contenedor_acerca {
         gap: 2rem;
     }
@@ -747,6 +848,11 @@ section {
 
     .herramientas-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tech-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
     }
 }
 
@@ -797,13 +903,13 @@ section {
         font-size: 1rem;
     }
 
-
     .herramienta-card i,
     .herramienta-card .tool-icon {
         font-size: 1.8rem;
         width: 1.8rem;
         height: 1.8rem;
     }
+
 }
 
 @media (max-width: 600px) {
@@ -844,6 +950,10 @@ section {
         width: 100%;
     }
 
+    .tech-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
 
 
     .info_texto {

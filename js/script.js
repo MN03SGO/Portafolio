@@ -21,8 +21,9 @@ const proyectos = [
     category: "web",
     categoryTag: "Desarrollo Web",
     desc: "Sistema integral para la gestión académica y administrativa de instituciones educativas.",
+    tecnologia:["HTML", "CSS", "Js"], 
     visual: "https://mn03sgo.github.io/inti2.github.io/",
-    repo: "https://github.com/MN03SGO/inti2.github.io",
+    repo: "https://github.com/MN03SGO/inti2.github.io"
   },
   {
     nomProyecto: "Florecer Natural",
@@ -31,8 +32,9 @@ const proyectos = [
     category: "web",
     categoryTag: "Desarrollo Web",
     desc: "Sitio web enfocado en la promoción y venta de productos naturales y salud.",
+    tecnologia:["HTML", "CSS", "SCSS", "Js"],
     visual: "https://mn03sgo.github.io/FlorecerNatural.github.io/",
-    repo: "https://github.com/MN03SGO/FlorecerNatural.github.io",
+    repo: "https://github.com/MN03SGO/FlorecerNatural.github.io"
   },
   {
     nomProyecto: "Joyería Online",
@@ -41,6 +43,7 @@ const proyectos = [
     category: "web",
     categoryTag: "Desarrollo Web",
     desc: "E-commerce elegante diseñado para la visualización de catálogos de joyería fina.",
+    tecnologia:["HTML", "CSS", "Javascript"], 
     visual: "https://mn03sgo.github.io/INTI.github.io/index.html",
     repo: "https://github.com/MN03SGO/INTI.github.io",
   },
@@ -51,6 +54,7 @@ const proyectos = [
     category: "web",
     categoryTag: "Desarrollo web",
     desc: "Aplicación web robusta para el control de stock, entradas y salidas de productos en tiempo real.",
+    tecnologia:["TypeScript", "CSS","API REST"], 
     visual: "https://test1-teal-ten.vercel.app/",
     repo: "https://github.com/MN03SGO/test1",
     /*enDesarrollo: true,*/
@@ -62,8 +66,9 @@ const proyectos = [
     category: "web",
     categoryTag: "Desarrollo web",
     desc: "Intento de creacion de aplicacion web comunitaria que mapea comedores populares, pupuserías, puestos callejeros y mercados económicos en San Salvador los lugares reales donde come la gente de a pie, que Google Maps ignora o digitalmente “no existen”.",
+    tecnologia:["TypeScript"], 
     visual: "#",
-    repo: "https://github.com/MN03SGO/comedores_ss",
+    repo: "https://github.com/peperechas-sv/Comedores_SS",
     enDesarrollo: true,
     /*isLogo: true,*/
   },
@@ -75,8 +80,22 @@ const proyectos = [
     category: "embebido",
     categoryTag: "Raspberry Pi / IA",
     desc: "Dispositivo de asistencia para personas con discapacidad visual utilizando yolo V8 y una Raspberry Pi 4 + piCam.",
+    tecnologia:["Python","Jupyter Notebook","YOLOv8"], 
     visual: "#",
     repo: "https://github.com/MN03SGO/GafasIA",
+    isLogo: true,
+  },  
+  {
+    /*Embebido */
+    nomProyecto: "Brazo robotico con ROS",
+    img: "img/img_proyectos/representativa_brazo.jpg",
+    defaultImg: "https://via.placeholder.com/400x225?text=Asistente+Visual+IA",
+    category: "embebido",
+    categoryTag: "Raspberry Pi ",
+    desc: "El objetivo es desarrollar un sistema robótico capaz de percibir su entorno mediante una cámara web, identificar objetos de colores, y manipularlos de forma inteligente.",
+    tecnologia:["Python","Shell", "Docker"], 
+    visual: "#",
+    repo: "https://github.com/MN03SGO/Brazo_robotico",
     isLogo: true,
   },
   /*CRUDS*/
@@ -87,6 +106,7 @@ const proyectos = [
     category: "inventario",
     categoryTag: "Sistema de Gestion",
     desc: 'Sistema de gestion de inventario "CRUD", para una empresa que vende galletas ',
+    tecnologia:["Java","Postgre SQL"], 
     visual: "#",
     repo: "https://github.com/MN03SGO/Krocbites2",
     enDesarrollo: true,
@@ -99,6 +119,7 @@ const proyectos = [
     category: "inventario",
     categoryTag: "Sistema de Gestion",
     desc: "Aplicacion  de crear, actualizar, eliminar y modificar en un sistema sencillo echo en python ",
+    tecnologia:["Python","MySQL"], 
     visual: "#",
     repo: "https://github.com/MN03SGO/Krocbites2",
     enDesarrollo: false,
@@ -113,6 +134,7 @@ const proyectos = [
     category: "homelab",
     categoryTag: "Infraestructura",
     desc: "Este proyecto integra una VPN Mesh mediante Tailscale para acceso remoto seguro y tambien utiliza Docker para desplegar servicios, en este caso Open WebUI y Ollama. Esto permite la administración remota por protocolo SSH, la ejecución de modelos de IA locales con una interfaz bonita y amigable además el acceso seguro a recursos de la red doméstic",
+    tecnologia:["Shell","Docker"], 
     visual: "#",
     repo: "https://github.com/peperechas-sv/Home_lab",
     enDesarrollo: false,
@@ -128,12 +150,13 @@ const proyectos_display = (proyectos_mostrar) => {
 
   gridContainer.innerHTML = "";
 
+
   proyectos_mostrar.forEach((proyecto) => {
     const caja = document.createElement("div");
     caja.className = "proyecto-card";
     caja.setAttribute("data-category", proyecto.category);
 
-    let visualBtnHTML = "";
+    const tecnologias = proyecto.tecnologia ? proyecto.tecnologia.map(t => `<span class="tech-tag">${t}</span>`).join("") : "";
 
     if (proyecto.enDesarrollo) {
       visualBtnHTML = `<span class="btn" style="opacity: 0.5; cursor: not-allowed;">En Desarrollo</span>`;
@@ -148,6 +171,7 @@ const proyectos_display = (proyectos_mostrar) => {
                         </div>
                         <h3>${proyecto.nomProyecto}</h3>
                         <p>${proyecto.desc}</p>
+                        <div class="tarjeta_tecnologias">${tecnologias}</div>
                     </div>
                     <div class="btn_group">
                         ${visualBtnHTML}
@@ -219,3 +243,17 @@ if (btnTodos) {
 }
 
 proyectos_display(proyectos);
+
+const modal = document.getElementById('modal');
+const btnCerrar = document.getElementById('modal_cerrar');
+
+function cerrarModal() {
+    modal.style.opacity = '0';
+    modal.style.transition = 'opacity 0.2s ease';
+    setTimeout(() => modal.style.display = 'none', 200);
+}
+
+btnCerrar.addEventListener('click', cerrarModal);
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) cerrarModal();
+});
