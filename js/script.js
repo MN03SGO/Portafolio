@@ -81,7 +81,8 @@ const proyectos = [
     categoryTag: "Raspberry Pi / IA",
     desc: "Dispositivo de asistencia para personas con discapacidad visual utilizando yolo V8 y una Raspberry Pi 4 + piCam.",
     tecnologia:["Python","Jupyter Notebook","YOLOv8"], 
-    visual: "#",
+    visual: "",
+    enDesarrollo: false,
     repo: "https://github.com/MN03SGO/GafasIA",
     isLogo: true,
   },  
@@ -157,6 +158,8 @@ const proyectos_display = (proyectos_mostrar) => {
     caja.setAttribute("data-category", proyecto.category);
 
     const tecnologias = proyecto.tecnologia ? proyecto.tecnologia.map(t => `<span class="tech-tag">${t}</span>`).join("") : "";
+
+    let visualBtnHTML = "";
 
     if (proyecto.enDesarrollo) {
       visualBtnHTML = `<span class="btn" style="opacity: 0.5; cursor: not-allowed;">En Desarrollo</span>`;
