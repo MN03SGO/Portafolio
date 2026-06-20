@@ -13,18 +13,18 @@ if (menuIcono && navEnlaces) {
 }
 
 const proyectos = [
-  {
-    /*WEB*/
-    nomProyecto: "Pagina web INTI",
-    img: "img/img_proyectos/instituto.png",
-    defaultImg: "https://via.placeholder.com/400x225?text=Pagina+web+INTI",
-    category: "web",
-    categoryTag: "Desarrollo Web",
-    desc: "Sistema integral para la gestión académica y administrativa de instituciones educativas.",
-    tecnologia:["HTML", "CSS", "Js"], 
-    visual: "https://mn03sgo.github.io/inti2.github.io/",
-    repo: "https://github.com/MN03SGO/inti2.github.io"
-  },
+  // {
+  //   /*WEB*/
+  //   nomProyecto: "Pagina web INTI",
+  //   img: "img/img_proyectos/instituto.png",
+  //   defaultImg: "https://via.placeholder.com/400x225?text=Pagina+web+INTI",
+  //   category: "web",
+  //   categoryTag: "Desarrollo Web",
+  //   desc: "Sistema integral para la gestión académica y administrativa de instituciones educativas.",
+  //   tecnologia:["HTML", "CSS", "Js"], 
+  //   visual: "https://mn03sgo.github.io/inti2.github.io/",
+  //   repo: "https://github.com/MN03SGO/inti2.github.io"
+  // },
   {
     nomProyecto: "Florecer Natural",
     img: "img/img_proyectos/florecer.png",
