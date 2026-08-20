@@ -60,18 +60,32 @@ const proyectos = [
     /*enDesarrollo: true,*/
   },
   {
-    nomProyecto:"Comedores S.S",
-    img:"img/img_proyectos/ss.jpeg",
-    defaultImg: "https://via.placeholder.com/400x225?text=Joyeria+Online",
+    nomProyecto: "Directorio Médico",
+    img: "img/img_proyectos/directorio.png",
+    defaultImg: "https://via.placeholder.com/400x225?text=Directorio+Medico",
     category: "web",
-    categoryTag: "Desarrollo web",
-    desc: "Intento de creacion de aplicacion web comunitaria que mapea comedores populares, pupuserías, puestos callejeros y mercados económicos en San Salvador los lugares reales donde come la gente de a pie, que Google Maps ignora o digitalmente “no existen”.",
-    tecnologia:["TypeScript"], 
-    visual: "#",
-    repo: "https://github.com/peperechas-sv/Comedores_SS",
-    enDesarrollo: true,
-    /*isLogo: true,*/
+    categoryTag: "Proyecto para cliente · Web",
+    fecha: "2026",
+    desc: "Plataforma web para directorio médico, con perfiles de doctores y búsqueda de especialistas. Desarrollado con Next.js, TypeScript y Supabase.",
+
+    tecnologia: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase"],
+    visual: "https://saas-directory-tr7l.onrender.com/",
+    repo: "https://github.com/Kuskat-code/directory_",
+    isLogo: true,
   },
+  // {
+  //   nomProyecto:"Comedores S.S",
+  //   img:"img/img_proyectos/ss.jpeg",
+  //   defaultImg: "https://via.placeholder.com/400x225?text=Joyeria+Online",
+  //   category: "web",
+  //   categoryTag: "Desarrollo web",
+  //   desc: "Intento de creacion de aplicacion web comunitaria que mapea comedores populares, pupuserías, puestos callejeros y mercados económicos en San Salvador los lugares reales donde come la gente de a pie, que Google Maps ignora o digitalmente “no existen”.",
+  //   tecnologia:["TypeScript"], 
+  //   visual: "#",
+  //   repo: "https://github.com/peperechas-sv/Comedores_SS",
+  //   enDesarrollo: true,
+  //   /*isLogo: true,*/
+  // },
   {
     /*Embebido */
     nomProyecto: "Asistente Visual RPi 4",
@@ -142,6 +156,20 @@ const proyectos = [
     isLogo: true,
   },
 
+  {
+  nomProyecto: "Linux Access Control",
+  img: "img/img_proyectos/nftables.png",
+  defaultImg: "https://via.placeholder.com/400x225?text=Linux+Access+Control",
+  category: "homelab",
+  categoryTag: "Infraestructura",
+  desc: "Sistema de control de acceso para Linux desarrollado por capas mediante nftables, Bash y systemd, con una herramienta en Go para administrar las políticas de bloqueo y desbloqueo. El proyecto explora automatización, administración de servicios, firewall y control remoto mediante SSH.",
+  tecnologia: ["Go", "Bash", "Linux", "nftables", "systemd", "ssh"],
+  visual: "#",
+  repo: "https://github.com/MN03SGO/block-go",
+  enDesarrollo: true,
+  isLogo: true,
+},
+
 
 ];
 
@@ -158,6 +186,10 @@ const proyectos_display = (proyectos_mostrar) => {
     caja.setAttribute("data-category", proyecto.category);
 
     const tecnologias = proyecto.tecnologia ? proyecto.tecnologia.map(t => `<span class="tech-tag">${t}</span>`).join("") : "";
+    const fechaHTML = proyecto.fecha ? `<span class="proyecto-fecha">${proyecto.fecha}</span>` : "";
+    const bulletsHTML = proyecto.bullets
+      ? `<ul class="proyecto-bullets">${proyecto.bullets.map((item) => `<li>-${item}</li>`).join("")}</ul>`
+      : "";
 
     let visualBtnHTML = "";
 
@@ -173,7 +205,9 @@ const proyectos_display = (proyectos_mostrar) => {
                             <img src="${proyecto.img}" alt="${proyecto.nomProyecto}" onerror="this.onerror=null; this.src='${proyecto.defaultImg}';">
                         </div>
                         <h3>${proyecto.nomProyecto}</h3>
+                        ${fechaHTML}
                         <p>${proyecto.desc}</p>
+                        ${bulletsHTML}
                         <div class="tarjeta_tecnologias">${tecnologias}</div>
                     </div>
                     <div class="btn_group">
