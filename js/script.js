@@ -181,7 +181,9 @@ const proyectos = [
     tecnologia:["C","Linux","Debian","Drivers"], 
     visual: "#",
     repo: "https://github.com/MN03SGO/libfprint-elanmoc2",
+    issue: "https://gitlab.freedesktop.org/depau/libfprint/-/work_items/12",
     enDesarrollo: false,
+
     isLogo: true,
 },
 
@@ -229,6 +231,8 @@ const proyectos_display = (proyectos_mostrar) => {
                         ${visualBtnHTML}
                         <a href="${proyecto.repo}" target="_blank" class="btn">Repo</a>
                     </div>
+
+                    
                 `;
     gridContainer.appendChild(caja);
   });
