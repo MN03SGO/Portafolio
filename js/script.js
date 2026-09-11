@@ -156,18 +156,33 @@ const proyectos = [
     isLogo: true,
   },
 
+
   {
-  nomProyecto: "Linux Access Control",
-  img: "img/img_proyectos/nftables.png",
-  defaultImg: "https://via.placeholder.com/400x225?text=Linux+Access+Control",
-  category: "homelab",
-  categoryTag: "Infraestructura",
-  desc: "Sistema de control de acceso para Linux desarrollado por capas mediante nftables, Bash y systemd, con una herramienta en Go para administrar las políticas de bloqueo y desbloqueo. El proyecto explora automatización, administración de servicios, firewall y control remoto mediante SSH.",
-  tecnologia: ["Go", "Bash", "Linux", "nftables", "systemd", "ssh"],
-  visual: "#",
-  repo: "https://github.com/MN03SGO/block-go",
-  enDesarrollo: true,
-  isLogo: true,
+    nomProyecto: "Linux Access Control",
+    img: "img/img_proyectos/nftables.png",
+    defaultImg: "https://via.placeholder.com/400x225?text=Linux+Access+Control",
+    category: "homelab",
+    categoryTag: "Infraestructura",
+    desc: "Sistema de control de acceso para Linux desarrollado por capas mediante nftables, Bash y systemd, con una herramienta en Go para administrar las políticas de bloqueo y desbloqueo. El proyecto explora automatización, administración de servicios, firewall y control remoto mediante SSH.",
+    tecnologia: ["Go", "Bash", "Linux", "nftables", "systemd", "ssh"],
+    visual: "#",
+    repo: "https://github.com/MN03SGO/block-go",
+    enDesarrollo: true,
+    isLogo: true,
+    },
+
+    {
+    nomProyecto: "libfprint-elanmoc2",
+    img: "img/img_proyectoS/vpn.jpg",
+    defaultImg: "https://via.placeholder.com/400x225?text=Asistente+Visual+IA",
+    category: "Linux",
+    categoryTag: "Linux / Open Source",
+    desc: "Adaptación e implementación experimental del driver elanmoc2 de libfprint para lectores de huellas ELAN 04f3:0c4d en Debian 13 y kernel 6.19.8.",
+    tecnologia:["C","Linux","Debian","Drivers"], 
+    visual: "#",
+    repo: "https://github.com/MN03SGO/libfprint-elanmoc2",
+    enDesarrollo: false,
+    isLogo: true,
 },
 
 
@@ -235,6 +250,8 @@ const btnWeb = document.getElementById("proyectos_web");
 const btnInventario = document.getElementById("proyectos_inventario");
 const btnEmbebido = document.getElementById("proyectos_embebido");
 const btn_homelab  = document.getElementById("proyectos_homelab");
+const btn_linux  = document.getElementById("proyectos_linux");
+
 
 const setActiveButton = (activeBtn) => {
   const todosLosBotones = [btnTodos, btnWeb, btnInventario, btnEmbebido, btn_homelab];
@@ -271,6 +288,14 @@ if(btn_homelab){
     setActiveButton(btn_homelab);
   })
 }
+
+if(btn_linux){
+  btn_linux.addEventListener("click",() =>{
+    proyectosFiltrados("Linux");
+    setActiveButton(btn_linux);
+  })
+}
+
 
 if (btnTodos) {
   btnTodos.addEventListener("click", () => {
