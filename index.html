@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <title>Portafolio</title>
     <link rel="stylesheet" href="static/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    
+
     <!-- <script>
         window.alert('Proyecto en proceso : D <br> Presiona "ok"')
     </script>  -->
@@ -16,28 +16,23 @@
 
 </head>
 
-<body> 
+<body>
     <header class="header">
-        <a href="#" class="logo"><span> </span></a>
-
         <ul class="nav_enlaces">
+            <div class="nav_indicator"></div>
             <li>
-                <a href="#experiencia">Experiencia</a>
+                <a href="#experiencia">Experience</a>
             </li>
             <li>
-                <a href="#herramientas">Contactame</a>
+                <a href="#proyectos" class="active">Projects</a>
             </li>
-            <!-- <li>
-                <a href="#">Educación</a>
-            </li> -->
             <li>
-                <a class="celular" href="#proyectos">Proyectos</a>
+                <a href="#acerca_caja">About&nbsp;Me</a>
+            </li>
+            <li>
+                <a href="#contacto">Contact</a>
             </li>
         </ul>
-
-        <button class="btn_conexiones">
-            <a href="#proyectos">Proyectos</a>
-        </button>
 
         <i class="fa-solid fa-bars" id="menu-icon"></i>
 
@@ -58,7 +53,7 @@
         
     </section>
     -->
-<!-- 
+    <!-- 
     <div class="modal" id="modal">
         <div class="modal_caja">
             <img src="img/modal/beaver2.jpg" class="modal_img" alt="beaver">
@@ -81,9 +76,9 @@
 
                 <div class="btn_group">
                     <a class="btn" href="/pdf/cv.pdf" download="CV" target="_blank">Descargar CV</a>
-                    <a class="btn" href="">Contacto</a>
+                    <a class="btn" href="#contacto">Contact</a>
                 </div>
-                
+
 
                 <div class="sociales">
                     <a href="https://github.com/MN03SGO" target="_blank">
@@ -102,29 +97,34 @@
     </section>
 
 
-<!-- TRABAJAR  EN ESTO EL DIA DE HOY, dejar sin card la seccion de about me -->
+    <!-- TRABAJAR  EN ESTO EL DIA DE HOY, dejar sin card la seccion de about me -->
 
     <section id="acerca_caja" class="acerca_caja">
         <h2 class="section-title">Sobre de mi </h2>
 
         <div class="info_acerca">
-            <div class="caja_texto">   
+            <div class="caja_texto">
                 <p id="pa1" class="info_texto">
-                Soy estudiante de Ingeniería en Sistemas y Desarrollo de Software con experiencia práctica en soporte técnico, redes y desarrollo de soluciones. Me muevo cómodo en entornos Linux, especialmente Debian, y trabajo habitualmente con Java, PostgreSQL y Git.
+                    Soy estudiante de Ingeniería en Sistemas y Desarrollo de Software con experiencia práctica en
+                    soporte técnico, redes y desarrollo de soluciones. Me muevo cómodo en entornos Linux, especialmente
+                    Debian, y trabajo habitualmente con Java, PostgreSQL y Git.
                 </p>
-                
+
                 <p id="pa2" class="info_texto">
-                Me apasiona integrar inteligencia artificial en proyectos reales. Uno de mis trabajos más recientes es FlyBot, un asistente inteligente para búsqueda y comparación de vuelos. También disfruto el lado del hardware: he desarrollado proyectos embebidos con ESP32 y Raspberry Pi 4.
+                    Me apasiona integrar inteligencia artificial en proyectos reales. Uno de mis trabajos más recientes
+                    es FlyBot, un asistente inteligente para búsqueda y comparación de vuelos. También disfruto el lado
+                    del hardware: he desarrollado proyectos embebidos con ESP32 y Raspberry Pi 4.
                 </p>
-                
+
                 <p id="pa3" class="info_texto">
-                Aprendo principalmente de forma autodidacta, construyo proyectos propios y creo en el conocimiento compartido. Cuando tengo la oportunidad, busco colaborar y aportar soluciones junto a otros.
+                    Aprendo principalmente de forma autodidacta, construyo proyectos propios y creo en el conocimiento
+                    compartido. Cuando tengo la oportunidad, busco colaborar y aportar soluciones junto a otros.
                 </p>
             </div>
         </div>
     </section>
 
-    
+
 
     <section id="experiencia" class="experiencia">
         <h2 class="section-title">Experiencia</h2>
@@ -164,16 +164,23 @@
                     <h4>Directorio Médico</h4>
                     <h3> 2026</h3>
                     <p class="grid-card-desc">
-                        Desarrollo de una plataforma orientada a la creación de un directorio médico, permitiendo organizar y presentar información de profesionales de la salud mediante perfiles y funcionalidades de búsqueda. El proyecto fue desarrollado utilizando Next.js, React, TypeScript, Tailwind CSS y Supabase.
+                        Desarrollo de una plataforma orientada a la creación de un directorio médico, permitiendo
+                        organizar y presentar información de profesionales de la salud mediante perfiles y
+                        funcionalidades de búsqueda. El proyecto fue desarrollado utilizando Next.js, React, TypeScript,
+                        Tailwind CSS y Supabase.
                     </p>
                     <ul>
-                        <li>-Implementación de perfiles de doctores, directorio de especialistas y funcionalidades de citas.</li>
-                        <li>-Desarrollo colaborativo mediante Git/GitHub con flujo de ramas (feature branches, merges y resolución de conflictos).</li>
+                        <li>-Implementación de perfiles de doctores, directorio de especialistas y funcionalidades de
+                            citas.</li>
+                        <li>-Desarrollo colaborativo mediante Git/GitHub con flujo de ramas (feature branches, merges y
+                            resolución de conflictos).</li>
                         <li>-Integración de backend con Supabase (autenticación, base de datos y storage).</li>
                     </ul>
                     <div class="btn_group card-links">
-                        <a href="https://saas-directory-tr7l.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn">Visualizar</a>
-                        <a href="https://github.com/Kuskat-code/directory_" target="_blank" rel="noopener noreferrer" class="btn">Repo</a>
+                        <a href="https://saas-directory-tr7l.onrender.com/" target="_blank" rel="noopener noreferrer"
+                            class="btn">Visualizar</a>
+                        <a href="https://github.com/Kuskat-code/directory_" target="_blank" rel="noopener noreferrer"
+                            class="btn">Repo</a>
                     </div>
                 </div>
                 <div class="grid-card">
@@ -182,16 +189,21 @@
                     <h4>TaxPilot</h4>
                     <h3>2026</h3>
                     <p class="grid-card-desc">
-                        Organizador de Documentos Tributarios Electrónicos (DTE), desarrollado para una empresa que recibe documentación diariamente en múltiples formatos y canales. Construido con React, Vite y TypeScript.
+                        Organizador de Documentos Tributarios Electrónicos (DTE), desarrollado para una empresa que
+                        recibe documentación diariamente en múltiples formatos y canales. Construido con React, Vite y
+                        TypeScript.
                     </p>
                     <ul>
-                        <li>-Automatización del flujo de ingesta y procesamiento de DTEs con n8n (Gmail/webhook, extracción con OpenAI, almacenamiento en Supabase).</li>
+                        <li>-Automatización del flujo de ingesta y procesamiento de DTEs con n8n (Gmail/webhook,
+                            extracción con OpenAI, almacenamiento en Supabase).</li>
                         <li>-Dashboard con tablas, métricas y gráficos de volumen de procesamiento (Recharts).</li>
                         <li>-Manejo de estado y peticiones con TanStack Query y Axios.</li>
                     </ul>
                     <div class="btn_group card-links">
-                        <a href="https://tax-pilot-nu.vercel.app/login" target="_blank" rel="noopener noreferrer" class="btn">Visualizar</a>
-                        <a href="https://github.com/MN03SGO/TaxPilot" target="_blank" rel="noopener noreferrer" class="btn">Repo</a>
+                        <a href="https://tax-pilot-nu.vercel.app/login" target="_blank" rel="noopener noreferrer"
+                            class="btn">Visualizar</a>
+                        <a href="https://github.com/MN03SGO/TaxPilot" target="_blank" rel="noopener noreferrer"
+                            class="btn">Repo</a>
                     </div>
                 </div>
             </div>
@@ -253,7 +265,7 @@
                         <span>Java 17</span>
                     </div>
 
-                    
+
                     <div class="herramienta-card">
                         <img src="img/tools/postgresql-brands-solid-full.svg" alt="PostgreSQL" class="tool-icon">
                         <span>PostgreSQL</span>
@@ -298,27 +310,55 @@
             <button id="proyectos_homelab" class="btn">Infrastructure / Homelab Project</button>
 
             <button id="proyectos_linux" class="btn">Linux / Open Source</button>
-            
-            
+
+
         </div>
 
         <div class="proyecto-grid" id="projectGrid">
 
         </div>
     </section>
-    <!--  
     <section id="contacto" class="contacto">
-        <div class="input-box">
-            <h2 class="section-title">Contactame</h2>
+        <h2 class="section-title">Work With Me</h2>
 
-            <div class="input">
-                <input type="texto" placeholder="mn03sgo@proton.me">
-                <i class="fa-solid fa-envelope"></i>
+        <div class="contacto-contenedor">
+            <div class="contacto-intro">
+                <p class="contacto-tagline">Abierto a Colaboraciones y Oportunidades</p>
+                <p class="contacto-desc">
+                    Soy estudiante de ingeniería de software y desarrollador apasionado por construir plataformas web,
+                    integraciones de IA, sistemas embebidos y herramientas de automatización. ¿Tienes una idea de
+                    proyecto? ¡Conectemos!
+                </p>
             </div>
-            <div class="btn">Enviar</div>
+
+            <div class="contacto-cards">
+                <div class="contacto-card">
+                    <div class="contacto-card-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3>Ideas de Proyecto / Colaboración</h3>
+                    <p>¿Tienes una idea de proyecto, una oportunidad freelance o una propuesta técnica? Construyamos
+                        algo juntos.</p>
+                    <a href="mailto:mn03sgo@proton.me?subject=Project%20Idea&amp;body=Hi%20Anthony%2C%0A%0A"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-contacto-primary">
+                        <i class="fa-solid fa-envelope"></i> Enviar Propuesta
+                    </a>
+                </div>
+
+                <div class="contacto-card">
+                    <div class="contacto-card-icon">
+                        <i class="fa-brands fa-telegram"></i>
+                    </div>
+                    <h3>Telegram / Chat Rápido</h3>
+                    <p>Conéctate directamente por Telegram para conversar sobre proyectos y colaborar al instante.</p>
+                    <a href="https://t.me/MN03SGO_DEV" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-contacto-secondary">
+                        <i class="fa-brands fa-telegram"></i> Contactar por Telegram
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
-    -->
 
     <footer id="footer" class="footer">
         <ul>
@@ -332,10 +372,10 @@
                 <a href="#proyectos">Proyectos</a>
             </li>
             <li>
-                <a href="#footer">Contacto</a>
+                <a href="#contacto">Contacto</a>
             </li>
         </ul>
-        <p class="copyright">powered by | Sigarán <br> 
+        <p class="copyright">powered by | Sigarán <br>
     </footer>
 
     <script src="js/script.js"></script>

@@ -12,6 +12,41 @@ if (menuIcono && navEnlaces) {
   };
 }
 
+const navLinks = document.querySelectorAll(".nav_enlaces a");
+const navIndicator = document.querySelector(".nav_indicator");
+
+function updateNavIndicator(activeLink) {
+  const target = activeLink || document.querySelector(".nav_enlaces a.active");
+  if (target && navIndicator && navEnlaces) {
+    const linkRect = target.getBoundingClientRect();
+    const containerRect = navEnlaces.getBoundingClientRect();
+
+    navIndicator.style.width = `${linkRect.width}px`;
+    navIndicator.style.height = `${linkRect.height}px`;
+    navIndicator.style.left = `${linkRect.left - containerRect.left}px`;
+    navIndicator.style.top = `${linkRect.top - containerRect.top}px`;
+    navIndicator.style.opacity = "1";
+  }
+}
+
+if (navLinks.length > 0) {
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
+      updateNavIndicator(link);
+      if (navEnlaces && navEnlaces.classList.contains("active")) {
+        navEnlaces.classList.remove("active");
+        if (menuIcono) menuIcono.className = "fa-solid fa-bars";
+      }
+    });
+  });
+
+  window.addEventListener("load", () => updateNavIndicator());
+  window.addEventListener("resize", () => updateNavIndicator());
+  setTimeout(() => updateNavIndicator(), 50);
+}
+
 const proyectos = [
   // {
   //   /*WEB*/
@@ -32,7 +67,7 @@ const proyectos = [
     category: "web",
     categoryTag: "Desarrollo Web",
     desc: "Sitio web enfocado en la promoción y venta de productos naturales y salud.",
-    tecnologia:["HTML", "CSS", "SCSS", "Js"],
+    tecnologia: ["HTML", "CSS", "SCSS", "Js"],
     visual: "https://mn03sgo.github.io/FlorecerNatural.github.io/",
     repo: "https://github.com/MN03SGO/FlorecerNatural.github.io"
   },
@@ -43,7 +78,7 @@ const proyectos = [
     category: "web",
     categoryTag: "Desarrollo Web",
     desc: "E-commerce elegante diseñado para la visualización de catálogos de joyería fina.",
-    tecnologia:["HTML", "CSS", "Javascript"], 
+    tecnologia: ["HTML", "CSS", "Javascript"],
     visual: "https://mn03sgo.github.io/INTI.github.io/index.html",
     repo: "https://github.com/MN03SGO/INTI.github.io",
   },
@@ -54,7 +89,7 @@ const proyectos = [
     category: "web",
     categoryTag: "Desarrollo web",
     desc: "Aplicación web robusta para el control de stock, entradas y salidas de productos en tiempo real.",
-    tecnologia:["TypeScript", "CSS","API REST"], 
+    tecnologia: ["TypeScript", "CSS", "API REST"],
     visual: "https://test1-teal-ten.vercel.app/",
     repo: "https://github.com/MN03SGO/test1",
     /*enDesarrollo: true,*/
@@ -94,12 +129,12 @@ const proyectos = [
     category: "embebido",
     categoryTag: "Raspberry Pi / IA",
     desc: "Dispositivo de asistencia para personas con discapacidad visual utilizando yolo V8 y una Raspberry Pi 4 + piCam.",
-    tecnologia:["Python","Jupyter Notebook","YOLOv8"], 
+    tecnologia: ["Python", "Jupyter Notebook", "YOLOv8"],
     visual: "",
     enDesarrollo: false,
     repo: "https://github.com/MN03SGO/GafasIA",
     isLogo: true,
-  },  
+  },
   {
     /*Embebido */
     nomProyecto: "Brazo robotico con ROS",
@@ -108,7 +143,7 @@ const proyectos = [
     category: "embebido",
     categoryTag: "Raspberry Pi ",
     desc: "El objetivo es desarrollar un sistema robótico capaz de percibir su entorno mediante una cámara web, identificar objetos de colores, y manipularlos de forma inteligente.",
-    tecnologia:["Python","Shell", "Docker"], 
+    tecnologia: ["Python", "Shell", "Docker"],
     visual: "#",
     repo: "https://github.com/MN03SGO/Brazo_robotico",
     isLogo: true,
@@ -121,7 +156,7 @@ const proyectos = [
     category: "inventario",
     categoryTag: "Sistema de Gestion",
     desc: 'Sistema de gestion de inventario "CRUD", para una empresa que vende galletas ',
-    tecnologia:["Java","Postgre SQL"], 
+    tecnologia: ["Java", "Postgre SQL"],
     visual: "#",
     repo: "https://github.com/MN03SGO/Krocbites2",
     enDesarrollo: true,
@@ -134,7 +169,7 @@ const proyectos = [
     category: "inventario",
     categoryTag: "Sistema de Gestion",
     desc: "Aplicacion  de crear, actualizar, eliminar y modificar en un sistema sencillo echo en python ",
-    tecnologia:["Python","MySQL"], 
+    tecnologia: ["Python", "MySQL"],
     visual: "#",
     repo: "https://github.com/MN03SGO/Krocbites2",
     enDesarrollo: false,
@@ -142,14 +177,14 @@ const proyectos = [
   },
 
   /*HOMELAB*/
-    {
+  {
     nomProyecto: "Infraestructura VPN usando Tailscale",
     img: "img/img_proyectos/vpn.jpg",
     defaultImg: "https://via.placeholder.com/400x225?text=Asistente+Visual+IA",
     category: "homelab",
     categoryTag: "Infraestructura",
     desc: "Este proyecto integra una VPN Mesh mediante Tailscale para acceso remoto seguro y tambien utiliza Docker para desplegar servicios, en este caso Open WebUI y Ollama. Esto permite la administración remota por protocolo SSH, la ejecución de modelos de IA locales con una interfaz bonita y amigable además el acceso seguro a recursos de la red doméstic",
-    tecnologia:["Shell","Docker"], 
+    tecnologia: ["Shell", "Docker"],
     visual: "#",
     repo: "https://github.com/peperechas-sv/Home_lab",
     enDesarrollo: false,
@@ -169,23 +204,23 @@ const proyectos = [
     repo: "https://github.com/MN03SGO/block-go",
     enDesarrollo: true,
     isLogo: true,
-    },
+  },
 
-    {
+  {
     nomProyecto: "libfprint-elanmoc2",
     img: "img/img_proyectoS/vpn.jpg",
     defaultImg: "https://via.placeholder.com/400x225?text=Asistente+Visual+IA",
     category: "Linux",
     categoryTag: "Linux / Open Source",
     desc: "Adaptación e implementación experimental del driver elanmoc2 de libfprint para lectores de huellas ELAN 04f3:0c4d en Debian 13 y kernel 6.19.8.",
-    tecnologia:["C","Linux","Debian","Drivers"], 
+    tecnologia: ["C", "Linux", "Debian", "Drivers"],
     visual: "#",
     repo: "https://github.com/MN03SGO/libfprint-elanmoc2",
     issue: "https://gitlab.freedesktop.org/depau/libfprint/-/work_items/12",
     enDesarrollo: false,
 
     isLogo: true,
-},
+  },
 
 
 ];
@@ -253,8 +288,8 @@ const btnTodos = document.getElementById("todos");
 const btnWeb = document.getElementById("proyectos_web");
 const btnInventario = document.getElementById("proyectos_inventario");
 const btnEmbebido = document.getElementById("proyectos_embebido");
-const btn_homelab  = document.getElementById("proyectos_homelab");
-const btn_linux  = document.getElementById("proyectos_linux");
+const btn_homelab = document.getElementById("proyectos_homelab");
+const btn_linux = document.getElementById("proyectos_linux");
 
 
 const setActiveButton = (activeBtn) => {
@@ -286,15 +321,15 @@ if (btnEmbebido) {
   });
 }
 
-if(btn_homelab){
-  btn_homelab.addEventListener("click",() =>{
+if (btn_homelab) {
+  btn_homelab.addEventListener("click", () => {
     proyectosFiltrados("homelab");
     setActiveButton(btn_homelab);
   })
 }
 
-if(btn_linux){
-  btn_linux.addEventListener("click",() =>{
+if (btn_linux) {
+  btn_linux.addEventListener("click", () => {
     proyectosFiltrados("Linux");
     setActiveButton(btn_linux);
   })
@@ -314,12 +349,12 @@ const modal = document.getElementById('modal');
 const btnCerrar = document.getElementById('modal_cerrar');
 
 function cerrarModal() {
-    modal.style.opacity = '0';
-    modal.style.transition = 'opacity 0.2s ease';
-    setTimeout(() => modal.style.display = 'none', 200);
+  modal.style.opacity = '0';
+  modal.style.transition = 'opacity 0.2s ease';
+  setTimeout(() => modal.style.display = 'none', 200);
 }
 
 btnCerrar.addEventListener('click', cerrarModal);
 modal.addEventListener('click', (e) => {
-    if (e.target === modal) cerrarModal();
+  if (e.target === modal) cerrarModal();
 });
