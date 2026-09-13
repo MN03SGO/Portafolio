@@ -1,25 +1,23 @@
 const menuIcono = document.querySelector("#menu-icon");
 const navEnlaces = document.querySelector(".nav_enlaces");
-
-if (menuIcono && navEnlaces) {
-  menuIcono.onclick = () => {
-    navEnlaces.classList.toggle("active");
-    if (navEnlaces.classList.contains("active")) {
-      menuIcono.className = "fa-solid fa-xmark";
-    } else {
-      menuIcono.className = "fa-solid fa-bars";
-    }
-  };
-}
-
 const navLinks = document.querySelectorAll(".nav_enlaces a");
 const navIndicator = document.querySelector(".nav_indicator");
 
 function updateNavIndicator(activeLink) {
   const target = activeLink || document.querySelector(".nav_enlaces a.active");
   if (target && navIndicator && navEnlaces) {
+    if (window.getComputedStyle(navEnlaces).display === "none") {
+      navIndicator.style.opacity = "0";
+      return;
+    }
+
     const linkRect = target.getBoundingClientRect();
     const containerRect = navEnlaces.getBoundingClientRect();
+
+    if (linkRect.width === 0 && linkRect.height === 0) {
+      navIndicator.style.opacity = "0";
+      return;
+    }
 
     navIndicator.style.width = `${linkRect.width}px`;
     navIndicator.style.height = `${linkRect.height}px`;
@@ -27,6 +25,21 @@ function updateNavIndicator(activeLink) {
     navIndicator.style.top = `${linkRect.top - containerRect.top}px`;
     navIndicator.style.opacity = "1";
   }
+}
+
+if (menuIcono && navEnlaces) {
+  menuIcono.onclick = () => {
+    navEnlaces.classList.toggle("active");
+    if (navEnlaces.classList.contains("active")) {
+      menuIcono.className = "fa-solid fa-xmark";
+      requestAnimationFrame(() => {
+        updateNavIndicator();
+      });
+    } else {
+      menuIcono.className = "fa-solid fa-bars";
+      if (navIndicator) navIndicator.style.opacity = "0";
+    }
+  };
 }
 
 if (navLinks.length > 0) {

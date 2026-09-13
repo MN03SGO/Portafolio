@@ -1103,7 +1103,7 @@ section {
 
     .nav_enlaces li {
         margin-top: 0;
-        padding: 1rem;
+        padding: 0.4rem 0;
     }
 
     .grid-card {
